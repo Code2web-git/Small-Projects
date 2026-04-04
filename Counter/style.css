@@ -44,6 +44,11 @@ body::-webkit-scrollbar
   border-radius: 50%;
   font-size: 1.3rem;
   cursor: pointer;
+  transition: all .2s ease;
+}
+#number-counter button:active
+{
+  transform: scale(.9);
 }
 #number-counter button:nth-child(1)
 {
@@ -63,4 +68,5 @@ body::-webkit-scrollbar
   border-radius: 12px;
   border: none;
   pointer-events: none;
+  transition: all .2s ease;
 }
