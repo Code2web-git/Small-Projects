@@ -8,10 +8,20 @@ numberCountDisplay.value = index;
 
 numberCountDec.addEventListener('click' , ()=>{
   index--;
+  numberDiscl(.9);
   numberCountDisplay.value = index;
 });
 
 numberCountInc.addEventListener('click' , ()=>{
   index++;
+  numberDiscl(1.1);
   numberCountDisplay.value = index;
-})
+});
+
+function numberDiscl(x)
+{
+  numberCountDisplay.style.transform = `scale(${x})`;
+  setTimeout(()=>{
+    numberCountDisplay.style.transform = 'scale(1)';
+  } , 200);
+}
