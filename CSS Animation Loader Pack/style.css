@@ -1,0 +1,79 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body
+{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 25px;
+  background-color: #294c5aee;
+}
+body::-webkit-scrollbar
+{
+  width: 0;
+}
+
+.type
+{
+  background-color: rgba(118, 193, 223, 0.46);
+  aspect-ratio: 16/9;
+  width: clamp(200px , 100px + 25vw , 350px);
+  padding: 10px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-rows: 90fr 10fr;
+}
+.loader
+{
+  /* border: 1px solid ; */
+  margin-bottom: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7cdaff3a;
+  box-shadow: 1px 1px 5px , -1px -1px 5px;
+}
+.name
+{
+  font-family: sans-serif;
+  font-size: clamp(.7rem , .7rem + .5vw , 1.2rem);
+  color: white;
+}
+
+/* animation Type - 01 */
+.dot-loder1 .loader
+{
+  display: flex;
+  column-gap: 10px;
+}
+.dot-loder1 .loader span
+{
+  aspect-ratio: 1;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+  animation-name: type1lader;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transition: all .5s ease;
+  /* transform: scale(.5); */
+}
+@keyframes  type1lader
+{
+  20% , 60%
+  {
+    transform: scale(.5);
+  }
+  40% , 80%
+  {
+    transform: scale(1);
+  }
+  
+}
